@@ -1,5 +1,7 @@
 import { Nunito } from 'next/font/google'
 import './globals.css'
+import { Navbar } from './components'
+
 
 export const metadata = {
   title: 'Real Estates',
@@ -15,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>{children}</body>
+      <body className={nunito.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
